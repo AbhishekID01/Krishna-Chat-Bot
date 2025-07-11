@@ -20,7 +20,7 @@ const Krishna = () => {
 
     try {
       const res = await axios.post(
-        "https://krishna-chat-bot.onrender.com",
+        "https://krishna-chat-bot.onrender.com/speak",
         { text, language },
         { responseType: "blob" }
       );
