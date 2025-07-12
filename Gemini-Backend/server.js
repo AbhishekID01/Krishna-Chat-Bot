@@ -19,8 +19,8 @@ app.post("/speak", async (req, res) => {
   const { text, language } = req.body;
 
   const voiceMap = {
-    english: "aXbjk4JoIDXdCNz29TrS",
-    hindi: "aXbjk4JoIDXdCNz29TrS",
+    english: "yco9hkSzXpAeaJXfPNpa",
+    hindi: "yco9hkSzXpAeaJXfPNpa",
     // kannada: "yco9hkSzXpAeaJXfPNpa"  
   };
 
