@@ -161,11 +161,10 @@ const Krishna = () => {
               {messages.map((msg, i) => (
                 <div
                   key={i}
-                  className={`mb-2 px-3 py-2 rounded-lg flex gap-2 items-start text-white ${
-                    msg.sender === "user"
+                  className={`mb-2 px-3 py-2 rounded-lg flex gap-2 items-start text-white ${msg.sender === "user"
                       ? "bg-[#1b1c1d] self-end ml-auto flex-row-reverse"
                       : "bg-[#1b1c1d] self-start"
-                  } max-w-[75%] w-fit`}
+                    } max-w-[75%] w-fit`}
                 >
                   <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
                     <img
