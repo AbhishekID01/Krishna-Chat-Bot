@@ -5,7 +5,6 @@ import Krishna from './pages/Krishna'
 const App = () => {
   return (
     <div>
-      {/* <ChatBot/> */}
       <Krishna/>
     </div>
   )
