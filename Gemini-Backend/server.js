@@ -16,15 +16,9 @@ app.get("/", (req, res) => {
 
 // 🎤 Predefined voice speaking
 app.post("/speak", async (req, res) => {
-  const { text, language } = req.body;
+  const { text } = req.body;
 
-  const voiceMap = {
-    english: "yco9hkSzXpAeaJXfPNpa",
-    hindi: "yco9hkSzXpAeaJXfPNpa",
-    // kannada: "yco9hkSzXpAeaJXfPNpa"  
-  };
-
-  const voiceId = voiceMap[language?.toLowerCase()] || voiceMap.english;
+  const voiceId = "yco9hkSzXpAeaJXfPNpa"; // Sunny Singh voice
   const elevenApiKey = process.env.ELEVENLABS_API_KEY;
 
   try {
@@ -54,10 +48,15 @@ app.post("/speak", async (req, res) => {
 
     res.send(response.data);
   } catch (error) {
-    console.error("🔴 ElevenLabs TTS Error:", error.message);
-    res.status(500).json({ error: "Failed to convert text to speech." });
+    console.error("🔴 ElevenLabs Error:", {
+      message: error.message,
+      status: error.response?.status,
+      data: error.response?.data,
+    });
+    res.status(500).json({ error: "TTS conversion failed." });
   }
 });
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
