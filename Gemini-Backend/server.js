@@ -19,9 +19,9 @@ app.post("/speak", async (req, res) => {
   const { text, language } = req.body;
 
   const voiceMap = {
-    english: "yco9hkSzXpAeaJXfPNpa",  // Sunny Singh (your existing ID)
-    hindi: "yco9hkSzXpAeaJXfPNpa",  // 🔁 Replace with actual Hindi voice ID
-    kannada: "yco9hkSzXpAeaJXfPNpa" // 🔁 Replace with actual Kannada voice ID
+    english: "aXbjk4JoIDXdCNz29TrS",
+    hindi: "aXbjk4JoIDXdCNz29TrS",
+    // kannada: "yco9hkSzXpAeaJXfPNpa"  
   };
 
   const voiceId = voiceMap[language?.toLowerCase()] || voiceMap.english;
